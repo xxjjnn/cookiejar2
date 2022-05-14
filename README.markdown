@@ -1,9 +1,13 @@
+This is a fork to fix warnings.
+
+-----
+
 Ruby CookieJar
 ==============
 
   **Git**:	[http://github.com/dwaite/cookiejar](http://github.com/dwaite/cookiejar)
 
-  **Author**:	David Waite 
+  **Author**:	David Waite
 
 [![Build Status](https://travis-ci.org/dwaite/cookiejar.svg?branch=master)](https://travis-ci.org/dwaite/cookiejar)
 
