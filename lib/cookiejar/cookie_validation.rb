@@ -262,7 +262,7 @@ module CookieJar
       # where D is the value of the Domain attribute, and H is a string
       # that contains one or more dots.
       unless domains_match cookie_host, uri
-        errors << 'Domain is inappropriate based on request URI hostname'
+        errors << "Domain is inappropriate based on request URI hostname: {cookie_host: #{cookie_host}, uri: #{uri}}"
       end
 
       # The Port attribute has a "port-list", and the request-port was
