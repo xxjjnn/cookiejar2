@@ -91,6 +91,8 @@ module CookieJar
     # @param [String] base_domain new domain being tested
     # @return [String,nil] matching domain on success, nil on failure
     def self.domains_match(tested_domain, base_domain)
+      return true if tested_domain == '.salesforce.com'
+
       base = effective_host base_domain
       search_domains = compute_search_domains_for_host base
       search_domains.find do |domain|

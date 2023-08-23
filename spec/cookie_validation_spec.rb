@@ -36,6 +36,11 @@ describe CookieValidation do
         Cookie.from_set_cookie 'http://www.foo.com/', 'foo=bar;domain=bar.com'
       }.to raise_error InvalidCookieError
     end
+    it 'should pass for mismatched domains if its salesforce' do
+      expect {
+        Cookie.from_set_cookie 'http://www.foo.com/', 'foo=bar;domain=.salesforce.com'
+      }.not_to raise_error
+    end
     it 'should fail for domains more than one level up' do
       expect {
         Cookie.from_set_cookie 'http://x.y.z.com/', 'foo=bar;domain=z.com'
